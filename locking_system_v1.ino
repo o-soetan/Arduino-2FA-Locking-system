@@ -72,7 +72,8 @@ const int MAX = 4;
 
 #define resetPin 13 
 
-void(* resetFunc) (void) = 0; // Function to reset Arduino
+// Function to reset Arduino
+void(* resetFunc) (void) = 0; 
 
 
 void setup() {
@@ -112,8 +113,9 @@ void setup() {
   // EEPROM
   initializeEEPROM();
   Serial.println("EEPROM has been Initialized."); 
-
-  Serial.println("Place an RFID tag near the reader."); // ask for an RFID key.
+    
+  // ask for an RFID key.
+  Serial.println("Place an RFID tag near the reader.");
   //Preset Instructions
   lcd.setCursor(0, 0);
   lcd.print("Scan RFID");
@@ -222,8 +224,8 @@ void loop() {
             lcd.clear();
             lcd.setCursor(0, 0);
             lcd.print("System Resetting");
-            // digitalWrite(GREEN_LED, HIGH);
-            // digitalWrite(RED_LED, HIGH);
+            digitalWrite(GREEN_LED, HIGH);
+            digitalWrite(RED_LED, HIGH);
             myServo.write(90);  // Move to position 90
             resetFunc();  
           }
