@@ -62,6 +62,7 @@ A Two-Factor Authentication (2FA) locking system built with an **Arduino Uno R4 
 - Add buzzer for alerts
 - Log access attempts with timestamps (possibly using an SD card or serial monitor)
 - Encrypt PIN transmission between browser and board
+- Develop a more sophisticated web interface that allows users to change the password, view system status, and perform additional actions
 - Possibly design a custom PCB for a cleaner build
 
 
